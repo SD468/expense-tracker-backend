@@ -5,10 +5,12 @@ import java.time.YearMonth;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.expanse.tracker.entity.Transaction;
 import com.expanse.tracker.repos.TransactionRepos;
 
+@Service
 public class TransactionServiceImpl implements TransactionService {
 	
 	private final TransactionRepos transactionRepos;

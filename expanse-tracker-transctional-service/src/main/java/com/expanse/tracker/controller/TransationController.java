@@ -29,7 +29,7 @@ public class TransationController {
 		
 	}
 	
-	@GetMapping("/DateRange")
+	@GetMapping
     public List<Transaction> getAllTransactions() {
         return transactionService.getAllTransactions();
     }
