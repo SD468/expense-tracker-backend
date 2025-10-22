@@ -36,8 +36,8 @@ public class TransationController {
 	
 	@GetMapping("/DateRange")
     public List<Transaction> getTransactionsBetweenDates(
-            @RequestParam LocalDate start,
-            @RequestParam LocalDate end) {
+            @RequestParam String start,
+            @RequestParam String end) {
         return transactionService.getTransactionsBetweenDates(start, end);
     }
 	

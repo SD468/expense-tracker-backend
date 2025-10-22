@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.expanse.tracker.entity.Transaction;
 import com.expanse.tracker.repos.TransactionRepos;
+import com.expanse.tracker.utils.DateUtils;
 
 @Service
 public class TransactionServiceImpl implements TransactionService {
@@ -28,8 +29,9 @@ public class TransactionServiceImpl implements TransactionService {
 	    }
 
 	@Override
-	public List<Transaction> getTransactionsBetweenDates(LocalDate startDate, LocalDate endDate) {
-		return transactionRepos.findByDateBetween(startDate, endDate);
+	public List<Transaction> getTransactionsBetweenDates(String startDate, String endDate) {
+		
+		return transactionRepos.findByDateBetween(DateUtils.toLocalDate(startDate,"dd/mm/yyyy"), DateUtils.toLocalDate(endDate,"dd/mm/yyyy"));
 	}
 
 	@Override

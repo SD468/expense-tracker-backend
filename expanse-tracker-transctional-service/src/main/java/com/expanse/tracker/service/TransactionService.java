@@ -10,7 +10,7 @@ public interface TransactionService {
 
 	List<Transaction> getTransactionsForMonth(int year, int month);
 
-	List<Transaction> getTransactionsBetweenDates(LocalDate start, LocalDate end);
+	List<Transaction> getTransactionsBetweenDates(String start, String end);
 
 	List<Transaction> getAllTransactions();
 
