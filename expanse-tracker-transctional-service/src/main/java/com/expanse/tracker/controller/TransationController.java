@@ -17,7 +17,7 @@ import com.expanse.tracker.service.TransactionService;
 
 @RestController
 @RequestMapping("/api/v1/transactions")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 public class TransationController {
 	
 	@Autowired

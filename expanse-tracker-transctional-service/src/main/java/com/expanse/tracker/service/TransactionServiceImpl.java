@@ -31,7 +31,7 @@ public class TransactionServiceImpl implements TransactionService {
 	@Override
 	public List<Transaction> getTransactionsBetweenDates(String startDate, String endDate) {
 		
-		return transactionRepos.findByDateBetween(DateUtils.toLocalDate(startDate,"dd/mm/yyyy"), DateUtils.toLocalDate(endDate,"dd/mm/yyyy"));
+		return transactionRepos.findByDateBetween(DateUtils.toLocalDate(startDate), DateUtils.toLocalDate(endDate));
 	}
 
 	@Override
